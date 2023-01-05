@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+
+const { img, imgAlt, imgWidth, imgHeight, name, desc, link, LinkIcon, title } =
+  Astro.props;
+
+export interface Props {
+  img: any;
+  imgAlt: string;
+  imgWidth: number;
+  imgHeight: number;
+  name: string;
+  desc: string;
+  link: string;
+  LinkIcon: any;
+  title: string;
+}
+---
+
+<a
+  href={link}
+  aria-label={"Project Link"}
+  rel="noopener noreferrer"
+  target="_blank"
+  title=`Click for ${title}`
+  class="hoverable project-border-effect relative h-[350px] w-[290px] cursor-pointer select-none overflow-hidden rounded-[13px] bg-light-gray p-[2px]"
+>
+  <div class="relative h-full w-full overflow-hidden rounded-xl">
+    <Image
+      src={img}
+      alt={imgAlt}
+      width={imgWidth}
+      height={imgHeight}
+      format="avif"
+      class="absolute top-0 min-h-[60%] object-cover"
+    />
+    <div
+      class="project-fill-gradient project-fill-gradient-effect absolute h-full w-full cursor-pointer"
+    >
+      <!-- project content (name, description, icon) -->
+      <div
+        class="absolute left-0 h-full w-full p-3 text-dark-main dark:text-light-main"
+      >
+        <div class="flex h-[11.5rem] w-full items-end">
+          <div class="project-icon-mask mx-auto translate-y-2 drop-shadow-md">
+            <div class="w-14 rotate-[19deg]">
+              <LinkIcon />
+            </div>
+          </div>
+        </div>
+        <h3 class="mb-2">{name}</h3>
+        <p class="text-left leading-5">{desc}</p>
+      </div>
+    </div>
+  </div>
+</a>

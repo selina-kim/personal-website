@@ -1,0 +1,84 @@
+---
+export interface Props {
+  sectionId: string;
+}
+
+const { sectionId } = Astro.props;
+
+import Project from "@components/projects/Project.astro";
+
+import PersonalWebsiteThumbnail from "@images/project-thumbnails/personal-website.png";
+import PythonTetrisThumbnail from "@images/project-thumbnails/python-tetris.png";
+import EduEverywhereThumbnail from "@images/project-thumbnails/edu-everywhere.png";
+import StockpileThumbnail from "@images/project-thumbnails/stockpile.png";
+import MernBlogAppThumbnail from "@images/project-thumbnails/mern-blog-app.png";
+
+import DevpostIcon from "@icons/DevpostIcon.astro";
+import GitHubIcon from "@icons/GitHubIcon.astro";
+---
+
+<div
+  id={sectionId}
+  class="section flex-col justify-center py-[var(--navbar-height)] text-center"
+>
+  <div class="my-8 md:my-20">
+    <h2>my projects</h2>
+  </div>
+  <div class="flex w-full flex-wrap justify-center gap-4 md:gap-8">
+    <Project
+      name="MERN Stack Markdown Blog App"
+      desc="MERN Stack Markdown Blog App built with MongoDB, Express.js, React, Node.js and Typescript."
+      link="https://github.com/selina-kim/mern-blog-app"
+      LinkIcon={GitHubIcon}
+      img={MernBlogAppThumbnail}
+      imgAlt="MERN Stack Markdown Blog App Thumbnail"
+      imgWidth={720}
+      imgHeight={450}
+      title="Source Code"
+    />
+    <Project
+      name="Personal Website"
+      desc="Personal website built with Astro, Tailwind CSS, TypeScript and deployed with Netlify."
+      link="https://github.com/selina-kim/personal-website"
+      LinkIcon={GitHubIcon}
+      img={PersonalWebsiteThumbnail}
+      imgAlt="Personal Website Thumbnail"
+      imgWidth={720}
+      imgHeight={390}
+      title="Source Code"
+    />
+    <Project
+      name="Python Tetris"
+      desc="Tetris game built with Python and Pyglet library. Packaged with PyInstaller. All graphics and UI elements created from scratch."
+      link="https://github.com/selina-kim/python-tetris-game"
+      LinkIcon={GitHubIcon}
+      img={PythonTetrisThumbnail}
+      imgAlt="Python Tetris Thumbnail"
+      imgWidth={720}
+      imgHeight={520}
+      title="Source Code"
+    />
+    <Project
+      name="EDU Everywhere"
+      desc="Education platform prototype built with Python, Google Cloud, Flask on back-end and React on front-end."
+      link="https://github.com/selina-kim/EDUEverywhere"
+      LinkIcon={GitHubIcon}
+      img={EduEverywhereThumbnail}
+      imgAlt={"EDU Everywhere Thumbnail"}
+      imgWidth={720}
+      imgHeight={405}
+      title="Source Code"
+    />
+    <Project
+      name="Stockpile"
+      desc="Stock Trade Simulator App prototype built with Figma and React Native."
+      link="https://devpost.com/software/stockpile-zsbo0j"
+      LinkIcon={DevpostIcon}
+      img={StockpileThumbnail}
+      imgAlt="Stockpile Thumbnail"
+      imgWidth={720}
+      imgHeight={480}
+      title="Devpost"
+    />
+  </div>
+</div>

@@ -1,0 +1,76 @@
+---
+export interface Props {
+  sectionId: string;
+}
+
+const { sectionId } = Astro.props;
+
+import Social from "./Social.astro";
+
+import GitHubIcon from "@icons/GitHubIcon.astro";
+import LinkedInIcon from "@icons/LinkedInIcon.astro";
+import CopyIcon from "@icons/CopyIcon.astro";
+---
+
+<script src="@util/clipboard.js"></script>
+
+<div
+  id={sectionId}
+  class="section flex flex-col justify-center pb-[var(--footer-height)] pt-[var(--navbar-height)] text-center"
+>
+  <div class="flex flex-col items-center gap-y-6 py-6">
+    <!-- Resume button -->
+    <div
+      class="hoverable resume-scale project-border-effect relative cursor-pointer overflow-hidden rounded-full p-[2px] sm:p-1"
+    >
+      <a
+        href="/Resume.pdf"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="View Resume"
+        class="sm:outline-effect relative block w-56 overflow-hidden rounded-full bg-light-main px-5 py-2 text-lg font-bold leading-none dark:bg-dark-main sm:outline sm:outline-4 sm:outline-light-main dark:sm:outline-dark-main md:w-96 md:px-6 md:py-3 md:text-4xl"
+      >
+        Resume
+      </a>
+    </div>
+
+    <!-- Copy Email -->
+    <div
+      class="flex w-fit flex-row items-center justify-center rounded-md border border-light-gray bg-light-main p-1 dark:border-dark-gray dark:bg-dark-main md:p-2"
+    >
+      <p
+        id="myInput"
+        class="mx-2 text-base font-bold leading-none md:mx-4 md:text-xl"
+      >
+        selinakim343@outlook.com
+      </p>
+      <div class="tooltip">
+        <button
+          class="hoverable relative flex h-7 w-7 flex-col items-center justify-center rounded-md bg-accent-primary text-light-main dark:bg-accent-secondary dark:text-dark-main md:h-9 md:w-9"
+        >
+          <span
+            class="tooltiptext absolute left-1/2 top-[150%] z-10 -translate-x-1/2 whitespace-nowrap rounded-md bg-accent-primary px-2 py-0.5 text-sm opacity-0 outline outline-2 -outline-offset-1 outline-accent-primary dark:bg-accent-secondary dark:outline-accent-secondary md:px-3 md:py-1 md:text-base"
+            id="myTooltip">copy</span
+          >
+          <div class="w-4 md:w-6">
+            <CopyIcon />
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="flex justify-center gap-3 md:gap-4">
+      <Social
+        website="https://www.github.com/selina-kim"
+        alt="Github"
+        Icon={GitHubIcon}
+      />
+      <Social
+        website="https://www.linkedin.com/in/selina-kim"
+        alt="LinkedIn"
+        Icon={LinkedInIcon}
+      />
+    </div>
+  </div>
+</div>
