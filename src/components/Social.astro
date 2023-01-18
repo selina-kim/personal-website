@@ -1,0 +1,9 @@
+---
+const { website, icon } = Astro.props;
+---
+
+<span>
+    <a href={`https://www.${website}`} target="_blank" rel="noopener noreferrer" class="text-light-gray duration-[350ms] hover:text-accent-primary">
+        <iconify-icon icon={icon} width="25" height="25"></iconify-icon>
+    </a>
+</span>

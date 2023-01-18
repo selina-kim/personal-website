@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --navbar-height: 5rem;
+        --footer-height: 3.5rem;
+
+        --accent-primary: #9A35FF;
+        --accent-secondary: #ffc000;
+        --accent-gradient: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    
+        --light-gray: #808080;
+        --dark-gray: #4D4D4D;
+
+        --light-main: #D9D9D9;
+        --dark-main: #1E1E1E;
+    }
+
+    html {
+        font-family: "Red Hat Display";
+        width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+    }
+
+    body {
+        background-color: var(--light-main);
+    }
+
+    h2 {
+        @apply text-4xl;
+    }
+
+    h3 {
+        @apply text-2xl;
+    }
+
+    p {
+        @apply text-lg;
+        @apply leading-tight;
+    }
+}
+
+@layer components {
+    
+    .section {
+        @apply text-dark-main min-h-screen relative flex items-center;
+    }
+}
