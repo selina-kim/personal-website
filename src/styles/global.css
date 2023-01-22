@@ -3,19 +3,21 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --navbar-height: 5rem;
-        --footer-height: 3.5rem;
 
-        --accent-primary: #9A35FF;
-        --accent-secondary: #ffc000;
+    :root {
+
+        --navbar-height: 5rem;
+        --footer-height: 2rem;
+
+        --accent-primary: rgb(154, 53, 255);
+        --accent-secondary: rgb(255, 192, 0);
         --accent-gradient: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
     
-        --light-gray: #808080;
-        --dark-gray: #4D4D4D;
+        --light-gray: rgb(138, 138, 138);
+        --dark-gray: rgb(77, 77, 77);
 
-        --light-main: #D9D9D9;
-        --dark-main: #1E1E1E;
+        --light-main: rgb(217, 217, 217);
+        --dark-main: rgb(30, 30, 30);
     }
 
     html {
@@ -24,29 +26,186 @@
 		height: 100%;
 		margin: 0;
 		padding: 0;
+        scroll-behavior: smooth;
     }
 
     body {
         background-color: var(--light-main);
+        height: 100%;
     }
 
     h2 {
-        @apply text-4xl;
+        @apply text-2xl md:text-4xl;
     }
 
     h3 {
-        @apply text-2xl;
+        @apply text-xl md:text-2xl font-bold;
+        @apply leading-none;
+    }
+
+    h4 {
+        @apply text-base md:text-2xl font-bold;
+        @apply leading-none;
     }
 
     p {
-        @apply text-lg;
+        @apply text-base md:text-lg;
         @apply leading-tight;
     }
+
+    li {
+        @apply leading-none;
+    }
+
 }
 
 @layer components {
+
+    .global-padding {
+        @apply px-5 md:px-10 2xl:px-64;
+    }
     
     .section {
-        @apply text-dark-main min-h-screen relative flex items-center;
+        @apply text-dark-main min-h-full h-fit flex items-center;
     }
+
+    .project-border-effect:before {
+        mask-image: linear-gradient(
+            25deg,
+            transparent 0% 35%,
+            rgba(0, 0, 0, 50%) 50%,
+            rgb(0, 0, 0, 100%) 65% 100%
+        );
+        mask-repeat: no-repeat;
+        mask-position: 0% 100%;
+        mask-size: 300% 300%;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        content: "";
+        background: linear-gradient(
+            90deg,
+            var(--accent-primary) 0%,
+            var(--accent-secondary) 100%
+        );
+        background-repeat: no-repeat;
+        transition: mask-position 500ms ease;
+    }
+
+    .project-border-effect:hover:before {
+        mask-position: 100% 0%;
+    }
+
+    .project-fill-gradient {
+        background: linear-gradient(
+            to top,
+            var(--dark-main) 35%,
+            transparent 75%
+        );
+    }
+
+    .project-fill-gradient-effect:before {
+        mask-image: linear-gradient(
+            165deg,
+            transparent 0% 35%,
+            rgba(0, 0, 0, 50%) 60%,
+            rgb(0, 0, 0, 100%) 80% 100%
+        );
+        mask-repeat: no-repeat;
+        mask-position: 0% 0%;
+        mask-size: 300% 300%;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        content: "";
+        background:
+        radial-gradient(
+            circle farthest-corner at 50% 95%,
+            rgb(255, 255, 255, 0.6) 0%,
+            transparent 25% 100%
+        ),
+        radial-gradient(
+            circle farthest-corner at 60% 72%,
+            var(--accent-secondary) 0% 3%,
+            transparent 45% 100%
+        ),
+        radial-gradient(
+            circle farthest-corner at 83% 65%,
+            rgba(31, 199, 255, 0.85) 0% 5%,
+            transparent 30% 100%
+        ),
+        var(--accent-primary);
+        background-repeat: no-repeat;
+        background-position: 50% 30%;
+        background-size: 350% 350%;
+        transition: mask-position 300ms ease, background-position 350ms ease,
+        background-psize 350ms ease;
+    }
+
+    .project-border-effect:hover .project-fill-gradient-effect:before {
+        mask-position: 100% 100%;
+        background-position: 100% 100%;
+        background-size: 300% 300%;
+    }
+
+    .project-shadow {
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .resume-scale {
+        @apply hover:scale-[1.05] duration-[150ms] ease-in
+    }
+
+    .outline-effect {
+        outline: solid var(--light-main) 4px;
+        outline-offset: -1px;
+        transition: outline-width 100ms ease;
+    }
+
+    .resume-scale:hover > .outline-effect {
+        @apply outline-0;
+    }
+
+    .navbar-object-hover {
+    @apply relative bg-accent-gradient bg-clip-text w-fit h-fit flex justify-center items-end sm:items-center sm:justify-center;
+    /* @apply transition-[color] duration-150 hover:text-transparent; */
+    
+    }
+
+    .stroke-animation {
+        @apply absolute w-8 sm:w-11 md:w-14 -bottom-1 sm:-bottom-2 md:-bottom-[0.6rem];
+        animation: show 1s forwards;
+    }
+
+    /* to prevent draw-out happening at refresh */
+    @keyframes show {
+        0% { opacity: 0; }
+        99% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    .path-animation {
+        stroke-dasharray: 300;
+        animation: draw-out 250ms ease-in forwards;
+    }
+    
+    .navbar-object-hover:hover .path-animation {
+        animation: draw-in 300ms ease-out forwards;
+    }
+
+    @keyframes draw-in {
+        from { stroke-dashoffset: 300; } 
+        to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes draw-out {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 300; }
+    }
+
 }

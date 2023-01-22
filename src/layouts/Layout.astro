@@ -17,6 +17,7 @@ export interface Props {
 		<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js" type="module"></script>
 		<meta name="generator" content={Astro.generator} />
+		<meta name="language" content="English" />
 		<title>{title}</title>
 	</head>
 	<body>
@@ -24,3 +25,21 @@ export interface Props {
 	</body>
 </html>
 
+<script is:inline>
+	const theme = (() => {
+		if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+			return localStorage.getItem("theme");
+		}
+		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+			return "dark";
+		}
+		return "light";
+		})();
+		
+	if (theme === "light") {
+		document.documentElement.classList.remove("dark");
+	} else {
+		document.documentElement.classList.add("dark");
+	}
+	window.localStorage.setItem("theme", theme);
+</script>

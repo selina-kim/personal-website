@@ -1,0 +1,45 @@
+---
+export interface Props {
+	sectionId: string;
+}
+
+const { sectionId } = Astro.props;
+
+import Project from "../Project.astro";
+---
+
+<div id={sectionId} class="section min-h-full h-fit flex-col justify-center text-center">
+    <div class="w-full my-8 md:my-20">
+        <h2>my projects</h2>
+    </div>
+    <div class="flex w-full flex-wrap justify-center gap-0 md:gap-3">
+        <Project 
+            name="Personal Website"
+            desc="Personal website built with Astro, Tailwind CSS, TypeScript and deployed with Firebase."
+            link="https://github.com/selina-kim/personal-website"
+            imgLink="/images/project-thumbnails/personal-website.png"
+            imgAlt="Personal Website Thumbnail"
+        />
+        <Project 
+            name="Python Tetris"
+            desc="Tetris game built with Python and Pyglet library. All graphics and UI elements created from scratch."
+            link="https://github.com/selina-kim/python-tetris-game"
+            imgLink="/images/project-thumbnails/python-tetris.png"
+            imgAlt="Python Tetris Thumbnail"
+        />
+        <Project
+            name="EDU Everywhere"
+            desc="Education platform prototype built with Python, Google Cloud, Flask on back-end and React.js on front-end."
+            link="https://devpost.com/software/edu-everywhere"
+            imgLink="/images/project-thumbnails/edu-everywhere.png"
+            imgAlt="EDU Everywhere Thumbnail"
+        />
+        <Project 
+            name="Stockpile"
+            desc="Stock Trade Simulator App prototype built with Figma and React Native."
+            link="https://devpost.com/software/stockpile-zsbo0j"
+            imgLink="/images/project-thumbnails/stockpile.png"
+            imgAlt="Stockpile Thumbnail"
+        />
+    </div>
+</div>

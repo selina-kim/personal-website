@@ -16,6 +16,7 @@ module.exports = {
 				},
 				accent: {
 					primary: 'var(--accent-primary)',
+					'primary-darker': 'var(--accent-primary-darker)',
 					secondary: 'var(--accent-secondary)'
 				},
 			},

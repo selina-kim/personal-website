@@ -1,0 +1,34 @@
+---
+export interface Props {
+	sectionId: string;
+}
+
+const { sectionId } = Astro.props;
+
+import Social from '../Social.astro';
+---
+
+<div id={sectionId} class="section flex-col justify-center text-center">
+    <div class="flex-col my-[var(--footer-height)] md:my-20 py-4 space-y-6">
+        <h4 class="select-all">
+            selinakim343@outlook.com
+        </h4>
+
+        <div class="relative overflow-hidden p-[2px] sm:p-1 rounded-full resume-scale bg-light-gray project-border-effect cursor-pointer">
+            <a 
+            href="/Resume.pdf" 
+            rel="noopener noreferrer" 
+            target="_blank" 
+            title="View Resume" 
+            class="relative block w-56 md:w-96 text-lg md:text-4xl leading-none font-bold overflow-hidden rounded-full px-5 py-2 md:px-6 md:py-3 bg-light-main sm:outline-effect">
+                Resume
+            </a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center gap-3">
+            <Social website="github.com/selina-kim" icon="akar-icons:github-fill"/>
+            <Social website="linkedin.com/in/selina-kim" icon="akar-icons:linkedin-box-fill"/>
+        </div>
+    </div>
+</div>

@@ -1,9 +1,17 @@
 ---
 const { website, icon } = Astro.props;
+
+export interface Props {
+	website: string;
+	icon: string;
+}
 ---
 
 <span>
-    <a href={`https://www.${website}`} target="_blank" rel="noopener noreferrer" class="text-light-gray duration-[350ms] hover:text-accent-primary">
-        <iconify-icon icon={icon} width="25" height="25"></iconify-icon>
+    <a href={`https://www.${website}`} target="_blank" rel="noopener noreferrer" class="text-light-gray duration-[400ms] hover:text-accent-primary">
+        <!-- <div class="md:p-1 md:scale-125"> -->
+        <div class="-mb-2">
+            <iconify-icon icon={icon} width="35" height="35" />
+        </div>
     </a>
 </span>
