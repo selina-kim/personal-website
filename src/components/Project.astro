@@ -1,9 +1,13 @@
 ---
-const { imgLink, imgAlt, name, desc, link } = Astro.props;
+import { Image } from '@astrojs/image/components';
+
+const { imgLink, imgAlt, imgWidth, imgHeight, name, desc, link } = Astro.props;
 
 export interface Props {
 	imgLink: string;
 	imgAlt: string;
+    imgWidth: number;
+    imgHeight: number;
     name: string;
     desc: string;
     link: string;
@@ -15,7 +19,7 @@ href={link} rel="noopener noreferrer"
 target="_blank" title="Click for more details"
 class="relative w-full max-w-[550px] h-[350px] md:w-[290px] m-4 p-1 overflow-hidden rounded-2xl project-border-effect select-none cursor-pointer bg-light-main project-shadow">
     <div class="relative w-full h-full overflow-hidden rounded-xl">
-        <img src={imgLink} alt={imgAlt} class="absolute top-0 object-cover min-h-[65%]">
+        <Image src={imgLink} alt={imgAlt} width={imgWidth} height={imgHeight} format="avif" class="absolute top-0 object-cover min-h-[65%]"/>
         <div class="absolute h-full w-full project-fill-gradient project-fill-gradient-effect">
             <div class="absolute w-full left-0 top-52 p-3 text-light-main">
                 <h3 class="mb-2">{name}</h3>
