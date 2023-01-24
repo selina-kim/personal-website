@@ -1,15 +1,19 @@
 ---
-const { website, icon } = Astro.props;
+const { website, icon, alt } = Astro.props;
 
 export interface Props {
 	website: string;
 	icon: string;
+    alt: string;
 }
 ---
 
 <span>
-    <a href={`https://www.${website}`} target="_blank" rel="noopener noreferrer" class="text-light-gray duration-[400ms] hover:text-accent-primary">
-        <!-- <div class="md:p-1 md:scale-125"> -->
+    <a
+    href={`https://www.${website}`}
+    aria-label={alt}
+    target="_blank" rel="noopener noreferrer"
+    class="text-light-gray duration-[400ms] hover:text-accent-primary">
         <div class="-mb-2">
             <iconify-icon icon={icon} width="35" height="35" />
         </div>
