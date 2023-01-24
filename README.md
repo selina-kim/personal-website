@@ -6,7 +6,7 @@
             <b>selinakim.me</b>
         </a>
 </p>
-Personal website built with Astro.js, Tailwind CSS, and TypeScript. Deployed with Firebase.
+Personal website built with Astro.js, Tailwind CSS, and TypeScript. Deployed with Netlify.
 
 ### Initial Prototype Sketch in Figma
 <p align="center">
@@ -27,7 +27,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`      | Preview your build locally, before deploying       |
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
 | `npm run astro --help` | Get help using the Astro CLI                       |
-| `firebase deploy`      | Deploy website to firebase                         |
 
 ### TODO
 - Smooth Scrolling
