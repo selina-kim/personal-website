@@ -33,7 +33,7 @@
         background-color: var(--light-main);
         height: 100%;
     }
-
+    
     h2 {
         @apply text-2xl md:text-4xl;
     }
