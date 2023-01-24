@@ -101,7 +101,7 @@
     .project-fill-gradient {
         background: linear-gradient(
             to top,
-            var(--dark-main) 35%,
+            var(--dark-main) 40%,
             transparent 75%
         );
     }
