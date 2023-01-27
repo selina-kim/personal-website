@@ -1,6 +1,8 @@
 # Personal Website
 <p align="center">
-    <img src="design/personal-website.png">
+    <a href="https://selinakim.me">
+        <img src="design/personal-website.png">
+    </a>
     Live at:
         <a href="https://selinakim.me">
             <b>selinakim.me</b>
