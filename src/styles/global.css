@@ -10,7 +10,7 @@
         --footer-height: 2rem;
 
         --accent-primary: rgb(154, 53, 255);
-        --accent-secondary: rgb(255, 192, 0);
+        --accent-secondary: rgb(55, 171, 255);
         --accent-gradient: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
     
         --light-gray: rgb(138, 138, 138);
@@ -135,7 +135,7 @@
         ),
         radial-gradient(
             circle farthest-corner at 83% 65%,
-            rgba(31, 199, 255, 0.85) 0% 5%,
+            rgb(255, 170, 0) 0% 5%,
             transparent 30% 100%
         ),
         var(--accent-primary);
