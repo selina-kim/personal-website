@@ -8,7 +8,7 @@ const { sectionId } = Astro.props;
 import Project from "../Project.astro";
 ---
 
-<div id={sectionId} class="section min-h-full h-fit flex-col justify-center text-center">
+<div id={sectionId} class="section flex-col justify-center text-center">
     <div class="w-full my-8 md:my-20">
         <h2>my projects</h2>
     </div>
@@ -33,7 +33,7 @@ import Project from "../Project.astro";
         />
         <Project
             name="EDU Everywhere"
-            desc="Education platform prototype built with Python, Google Cloud, Flask on back-end and React.js on front-end."
+            desc="Education platform prototype built with Python, Google Cloud, Flask on back-end and React on front-end."
             link="https://github.com/selina-kim/EDUEverywhere"
             imgLink="/images/project-thumbnails/edu-everywhere.png"
             imgAlt="EDU Everywhere Thumbnail"

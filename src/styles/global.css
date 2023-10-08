@@ -62,7 +62,7 @@
 @layer components {
 
     .global-padding {
-        @apply px-5 md:px-10 2xl:px-64;
+        @apply px-5 md:px-14;
     }
     
     .section {

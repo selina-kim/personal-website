@@ -6,10 +6,10 @@ export interface Props {
 const { sectionId } = Astro.props;
 ---
 
-<div id={sectionId} class="section">
-    <div class="my-[var(--navbar-height)] py-4">
+<div id={sectionId} class="section justify-center">
+    <div class="my-[var(--navbar-height)] py-4 text-center">
         <h2 class="mb-3">
-            hi, my name is <b>selina kim</b>
+            hi, my name is <b class="whitespace-nowrap">selina kim</b> :)
         </h2>
 
         <div class="flex-col content-center">
