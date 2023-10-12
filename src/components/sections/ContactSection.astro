@@ -6,6 +6,9 @@ export interface Props {
 const { sectionId } = Astro.props;
 
 import Social from '../Social.astro';
+
+import GitHubIcon from '../../icons/GitHubIcon.astro';
+import LinkedInIcon from '../../icons/LinkedInIcon.astro';
 ---
 
 <div id={sectionId} class="section flex-col justify-center text-center">
@@ -27,15 +30,15 @@ import Social from '../Social.astro';
         </div>
 
         <!-- Social Icons -->
-        <div class="flex justify-center gap-3">
+        <div class="flex justify-center gap-3 md:gap-4">
             <Social
-                website="github.com/selina-kim"
+                website="https://www.github.com/selina-kim"
                 alt="Github"
-                icon="akar-icons:github-fill"/>
+                Icon={GitHubIcon}/>
             <Social
-                website="linkedin.com/in/selina-kim"
+                website="https://www.linkedin.com/in/selina-kim"
                 alt="LinkedIn"
-                icon="akar-icons:linkedin-box-fill"/>
+                Icon={LinkedInIcon}/>
         </div>
     </div>
 </div>
