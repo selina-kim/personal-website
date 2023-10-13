@@ -69,6 +69,25 @@
         @apply text-dark-main min-h-full h-fit flex items-center;
     }
 
+    .bg-accent-gradient {
+        background-image: var(--accent-gradient);
+    }
+
+    .drop-shadow-gradient {
+        background-image: none;
+        filter:
+            drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+        transition: 300ms ease;
+    }
+
+    .drop-shadow-gradient:hover {
+        filter:
+            drop-shadow(0 0 3px rgba(255,255,255, 1))
+            drop-shadow(-2px -2px 7px var(--accent-secondary))
+            drop-shadow(2px 2px 7px var(--accent-primary))
+            drop-shadow(0 0 3px rgba(255,255,255, 0.3));
+    }
+
     .project-border-effect:before {
         mask-image: linear-gradient(
             25deg,
@@ -94,9 +113,9 @@
         transition: mask-position 500ms ease;
     }
 
-    .project-border-effect:hover:before {
+    /* .project-border-effect:hover:before {
         mask-position: 100% 0%;
-    }
+    } */
 
     .project-fill-gradient {
         background: linear-gradient(
@@ -106,7 +125,7 @@
         );
     }
 
-    .project-fill-gradient-effect:before {
+    /* .project-fill-gradient-effect:before {
         mask-image: linear-gradient(
             165deg,
             transparent 0% 35%,
@@ -143,14 +162,14 @@
         background-position: 50% 30%;
         background-size: 350% 350%;
         transition: mask-position 300ms ease, background-position 350ms ease,
-        background-psize 350ms ease;
-    }
+        background-size 350ms ease;
+    } */
 
-    .project-border-effect:hover .project-fill-gradient-effect:before {
+    /* .project-border-effect:hover .project-fill-gradient-effect:before {
         mask-position: 100% 100%;
         background-position: 100% 100%;
         background-size: 300% 300%;
-    }
+    } */
 
     .project-shadow {
         box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
