@@ -1,28 +1,38 @@
 ---
 import { Image } from 'astro:assets';
 
-const { imgLink, imgAlt, imgWidth, imgHeight, name, desc, link } = Astro.props;
+const { img, imgAlt, imgWidth, imgHeight, name, desc, link, LinkIcon, title } = Astro.props;
 
 export interface Props {
-	imgLink: string;
+	img: string;
 	imgAlt: string;
     imgWidth: number;
     imgHeight: number;
     name: string;
     desc: string;
     link: string;
+    LinkIcon: any;
+    title: string;
 }
 ---
 
 <a
 href={link} aria-label={"Project Link"}
 rel="noopener noreferrer"
-target="_blank" title="Click for more details"
+target="_blank" title=`Click for ${title}`
 class="relative w-full max-w-[550px] h-[350px] md:w-[290px] m-4 p-1 overflow-hidden rounded-2xl project-border-effect select-none cursor-pointer bg-light-main project-shadow">
     <div class="relative w-full h-full overflow-hidden rounded-xl">
-        <Image src={imgLink} alt={imgAlt} width={imgWidth} height={imgHeight} format="avif" class="absolute top-0 object-cover min-h-[60%]"/>
+        <Image src={img} alt={imgAlt} width={imgWidth} height={imgHeight} format="avif" class="absolute top-0 object-cover min-h-[60%]"/>
         <div class="absolute h-full w-full project-fill-gradient project-fill-gradient-effect">
-            <div class="absolute w-full h-fit left-0 top-[11.5rem] p-3 text-light-main">
+            <!-- project content (name, description, icon) -->
+            <div class="absolute w-full h-full left-0 p-3 text-light-main">
+                <div class="flex h-[11.5rem] w-full items-end">
+                    <div class="mx-auto project-icon-mask drop-shadow-md translate-y-2">
+                        <div class="w-14 rotate-[19deg]">
+                            <LinkIcon />
+                        </div>
+                    </div>
+                </div>
                 <h3 class="mb-2 bg-">{name}</h3>
                 <p class="text-left leading-5">{desc}</p>
             </div>

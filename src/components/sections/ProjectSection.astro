@@ -6,6 +6,9 @@ export interface Props {
 const { sectionId } = Astro.props;
 
 import Project from "../Project.astro";
+
+import DevpostIcon from "../../icons/DevpostIcon.astro";
+import GitHubIcon from "../../icons/GitHubIcon.astro";
 ---
 
 <div id={sectionId} class="section flex-col justify-center text-center">
@@ -17,37 +20,45 @@ import Project from "../Project.astro";
             name="Personal Website"
             desc="Personal website built with Astro, Tailwind CSS, TypeScript and deployed with Netlify."
             link="https://github.com/selina-kim/personal-website"
-            imgLink="/images/project-thumbnails/personal-website.png"
+            LinkIcon={GitHubIcon}
+            img="/images/project-thumbnails/personal-website.png"
             imgAlt="Personal Website Thumbnail"
             imgWidth={720}
             imgHeight={390}
+            title="Source Code"
         />
         <Project 
             name="Python Tetris"
             desc="Tetris game built with Python and Pyglet library. Packaged with PyInstaller. All graphics and UI elements created from scratch."
             link="https://github.com/selina-kim/python-tetris-game"
-            imgLink="/images/project-thumbnails/python-tetris.png"
+            LinkIcon={GitHubIcon}
+            img="/images/project-thumbnails/python-tetris.png"
             imgAlt="Python Tetris Thumbnail"
             imgWidth={720}
             imgHeight={520}
+            title="Source Code"
         />
         <Project
             name="EDU Everywhere"
             desc="Education platform prototype built with Python, Google Cloud, Flask on back-end and React on front-end."
             link="https://github.com/selina-kim/EDUEverywhere"
-            imgLink="/images/project-thumbnails/edu-everywhere.png"
+            LinkIcon={GitHubIcon}
+            img="/images/project-thumbnails/edu-everywhere.png"
             imgAlt="EDU Everywhere Thumbnail"
             imgWidth={720}
             imgHeight={405}
+            title="Source Code"
         />
         <Project 
             name="Stockpile"
             desc="Stock Trade Simulator App prototype built with Figma and React Native."
             link="https://devpost.com/software/stockpile-zsbo0j"
-            imgLink="/images/project-thumbnails/stockpile.png"
+            LinkIcon={DevpostIcon}
+            img="/images/project-thumbnails/stockpile.png"
             imgAlt="Stockpile Thumbnail"
             imgWidth={720}
             imgHeight={480}
+            title="Devpost"
         />
     </div>
 </div>
