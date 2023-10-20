@@ -76,7 +76,7 @@
     .drop-shadow-gradient {
         background-image: none;
         filter:
-            drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+            drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
         transition: 300ms ease;
     }
 
