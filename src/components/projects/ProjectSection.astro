@@ -5,10 +5,15 @@ export interface Props {
 
 const { sectionId } = Astro.props;
 
-import Project from "../Project.astro";
+import Project from "@components/projects/Project.astro";
 
-import DevpostIcon from "../../icons/DevpostIcon.astro";
-import GitHubIcon from "../../icons/GitHubIcon.astro";
+import PersonalWebsiteThumbnail from "@images/project-thumbnails/personal-website.png";
+import PythonTetrisThumbnail from "@images/project-thumbnails/python-tetris.png";
+import EduEverywhereThumbnail from "@images/project-thumbnails/edu-everywhere.png";
+import StockpileThumbnail from "@images/project-thumbnails/stockpile.png";
+
+import DevpostIcon from "@icons/DevpostIcon.astro";
+import GitHubIcon from "@icons/GitHubIcon.astro";
 ---
 
 <div id={sectionId} class="section flex-col justify-center text-center">
@@ -21,7 +26,7 @@ import GitHubIcon from "../../icons/GitHubIcon.astro";
             desc="Personal website built with Astro, Tailwind CSS, TypeScript and deployed with Netlify."
             link="https://github.com/selina-kim/personal-website"
             LinkIcon={GitHubIcon}
-            img="/images/project-thumbnails/personal-website.png"
+            img={PersonalWebsiteThumbnail}
             imgAlt="Personal Website Thumbnail"
             imgWidth={720}
             imgHeight={390}
@@ -32,7 +37,7 @@ import GitHubIcon from "../../icons/GitHubIcon.astro";
             desc="Tetris game built with Python and Pyglet library. Packaged with PyInstaller. All graphics and UI elements created from scratch."
             link="https://github.com/selina-kim/python-tetris-game"
             LinkIcon={GitHubIcon}
-            img="/images/project-thumbnails/python-tetris.png"
+            img={PythonTetrisThumbnail}
             imgAlt="Python Tetris Thumbnail"
             imgWidth={720}
             imgHeight={520}
@@ -43,8 +48,8 @@ import GitHubIcon from "../../icons/GitHubIcon.astro";
             desc="Education platform prototype built with Python, Google Cloud, Flask on back-end and React on front-end."
             link="https://github.com/selina-kim/EDUEverywhere"
             LinkIcon={GitHubIcon}
-            img="/images/project-thumbnails/edu-everywhere.png"
-            imgAlt="EDU Everywhere Thumbnail"
+            img={EduEverywhereThumbnail}
+            imgAlt={"EDU Everywhere Thumbnail"}
             imgWidth={720}
             imgHeight={405}
             title="Source Code"
@@ -54,7 +59,7 @@ import GitHubIcon from "../../icons/GitHubIcon.astro";
             desc="Stock Trade Simulator App prototype built with Figma and React Native."
             link="https://devpost.com/software/stockpile-zsbo0j"
             LinkIcon={DevpostIcon}
-            img="/images/project-thumbnails/stockpile.png"
+            img={StockpileThumbnail}
             imgAlt="Stockpile Thumbnail"
             imgWidth={720}
             imgHeight={480}

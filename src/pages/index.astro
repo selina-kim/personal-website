@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import HomeSection from '../components/sections/HomeSection.astro';
-import Footer from '../components/Footer.astro';
-import ProjectSection from '../components/sections/ProjectSection.astro';
-import ContactSection from '../components/sections/ContactSection.astro';
-import Particles from '../components/Particles';
+import Navbar from '@components/home/Navbar.astro';
+import HomeSection from '@components/home/HomeSection.astro';
+import Footer from '@components/contact/Footer.astro';
+import ProjectSection from '@components/projects/ProjectSection.astro';
+import ContactSection from '@components/contact/ContactSection.astro';
+import Particles from '@components/home/Particles';
 
 import '../styles/global.css';
 ---
@@ -15,10 +15,10 @@ import '../styles/global.css';
 	<!-- Webpage Content -->
 	<div class="h-full w-full mx-auto md:max-w-7xl block global-padding">
         <Particles client:only="react"
-            className="absolute inset-0 -z-10 animate-fade-in fill-black"
+            className="absolute inset-0 -z-10 animate-fade-in"
             quantity={120}
         />
-        
+
 		<HomeSection sectionId="home-section"/>
 		<ProjectSection sectionId="project-section"/>
 		<ContactSection sectionId="contact-section"/>
