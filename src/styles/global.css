@@ -70,39 +70,20 @@
     }
 
     .project-border-effect:before {
-        mask-image: linear-gradient(
-            25deg,
-            transparent 0% 35%,
-            rgba(0, 0, 0, 50%) 50%,
-            rgb(0, 0, 0, 100%) 65% 100%
-        );
-        mask-repeat: no-repeat;
-        mask-position: 0% 100%;
-        mask-size: 300% 300%;
         position: absolute;
         height: 100%;
         width: 100%;
         left: 0px;
         top: 0px;
         content: "";
-        background: linear-gradient(
-            90deg,
-            var(--accent-primary) 0%,
-            var(--accent-secondary) 100%
-        );
-        background-repeat: no-repeat;
-        transition: mask-position 500ms ease;
-    }
-
-    .project-border-effect:hover:before {
-        mask-position: 100% 0%;
+        background: var(--accent-gradient);
     }
 
     .project-fill-gradient {
         background: linear-gradient(
             to top,
             var(--dark-main) 40%,
-            transparent 75%
+            transparent 100%
         );
     }
 
@@ -150,10 +131,6 @@
         mask-position: 100% 100%;
         background-position: 100% 100%;
         background-size: 300% 300%;
-    }
-
-    .project-shadow {
-        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     }
 
     .project-icon-mask {
