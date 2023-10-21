@@ -43,11 +43,6 @@
         @apply leading-none;
     }
 
-    h4 {
-        @apply text-base md:text-2xl font-bold;
-        @apply leading-none;
-    }
-
     p {
         @apply text-base md:text-lg;
         @apply leading-tight;
@@ -67,6 +62,26 @@
     
     .section {
         @apply text-dark-main min-h-full h-fit flex items-center;
+    }
+
+    .gradient-underline:before {
+        mask-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 100%) 0% 40%,
+            transparent 85%
+        );
+        z-index: -1;
+        position: absolute;
+        height: 7px;
+        width: 100%;
+        bottom: -3px;
+        left: -1%;
+        content: "";
+        background: linear-gradient(
+            90deg,
+            var(--accent-primary) 0%,
+            var(--accent-secondary) 50% 100%
+        );
     }
 
     .project-border-effect:before {
