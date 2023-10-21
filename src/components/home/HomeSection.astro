@@ -1,21 +1,21 @@
 ---
 export interface Props {
-	sectionId: string;
+  sectionId: string;
 }
 
 const { sectionId } = Astro.props;
 ---
 
 <div id={sectionId} class="section justify-center">
-    <div class="my-[var(--navbar-height)] py-4 text-center">
-        <p class="text-2xl md:text-4xl mb-3">
-            hi, my name is <b class="whitespace-nowrap">selina kim</b> :)
-        </p>
+  <div class="my-[var(--navbar-height)] py-4 text-center">
+    <p class="text-2xl md:text-4xl mb-3">
+      hi, my name is <b class="whitespace-nowrap">selina kim</b> :)
+    </p>
 
-        <div class="flex-col content-center">
-            <p>I'm a programmer based in <b>Ontario, Canada</b>.</p>
-            <p>I'm also currently studying <b>computer science</b> at McMaster University.</p>
-            <p>Aside from programming, I have interests in video editing, motion graphics, and playing guitar.</p>
-        </div>
+    <div class="flex-col content-center">
+      <p>I'm a programmer based in <b>Ontario, Canada</b>.</p>
+      <p>I'm also currently studying <b>computer science</b> at McMaster University.</p>
+      <p>Aside from programming, I have interests in video editing, motion graphics, and playing guitar.</p>
     </div>
+  </div>
 </div>

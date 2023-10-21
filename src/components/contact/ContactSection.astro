@@ -1,44 +1,49 @@
 ---
 export interface Props {
-	sectionId: string;
+  sectionId: string;
 }
 
 const { sectionId } = Astro.props;
 
-import Social from './Social.astro';
+import Social from "./Social.astro";
 
-import GitHubIcon from '@icons/GitHubIcon.astro';
-import LinkedInIcon from '@icons/LinkedInIcon.astro';
+import GitHubIcon from "@icons/GitHubIcon.astro";
+import LinkedInIcon from "@icons/LinkedInIcon.astro";
 ---
 
 <div id={sectionId} class="section flex-col justify-center text-center">
-    <div class="flex-col my-[var(--footer-height)] md:my-20 py-4 space-y-6">
-        <p class="select-all text-base md:text-2xl font-bold leading-none">
-            selinakim343@outlook.com
-        </p>
+  <div class="flex-col my-[var(--footer-height)] md:my-20 py-4 space-y-6">
+    <p class="select-all text-base md:text-2xl font-bold leading-none">
+      selinakim343@outlook.com
+    </p>
 
-        <!-- Resume button -->
-        <div class="relative overflow-hidden p-[2px] sm:p-1 rounded-full resume-scale project-border-effect cursor-pointer">
-            <a 
-            href="/Resume.pdf" 
-            rel="noopener noreferrer" 
-            target="_blank" 
-            title="View Resume" 
-            class="relative block w-56 md:w-96 text-lg md:text-4xl leading-none font-bold overflow-hidden rounded-full px-5 py-2 md:px-6 md:py-3 bg-light-main sm:outline-effect">
-                Resume
-            </a>
-        </div>
-
-        <!-- Social Icons -->
-        <div class="flex justify-center gap-3 md:gap-4">
-            <Social
-                website="https://www.github.com/selina-kim"
-                alt="Github"
-                Icon={GitHubIcon}/>
-            <Social
-                website="https://www.linkedin.com/in/selina-kim"
-                alt="LinkedIn"
-                Icon={LinkedInIcon}/>
-        </div>
+    <!-- Resume button -->
+    <div
+      class="relative overflow-hidden p-[2px] sm:p-1 rounded-full resume-scale project-border-effect cursor-pointer"
+    >
+      <a
+        href="/Resume.pdf"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="View Resume"
+        class="relative block w-56 md:w-96 text-lg md:text-4xl leading-none font-bold overflow-hidden rounded-full px-5 py-2 md:px-6 md:py-3 bg-light-main sm:outline-effect"
+      >
+        Resume
+      </a>
     </div>
+
+    <!-- Social Icons -->
+    <div class="flex justify-center gap-3 md:gap-4">
+      <Social
+        website="https://www.github.com/selina-kim"
+        alt="Github"
+        Icon={GitHubIcon}
+      />
+      <Social
+        website="https://www.linkedin.com/in/selina-kim"
+        alt="LinkedIn"
+        Icon={LinkedInIcon}
+      />
+    </div>
+  </div>
 </div>

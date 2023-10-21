@@ -3,208 +3,217 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --navbar-height: 5rem;
+    --footer-height: 2rem;
 
-    :root {
+    --accent-primary: rgb(154, 53, 255);
+    --accent-secondary: rgb(55, 171, 255);
+    --accent-gradient: linear-gradient(
+      to right,
+      var(--accent-primary),
+      var(--accent-secondary)
+    );
 
-        --navbar-height: 5rem;
-        --footer-height: 2rem;
+    --light-gray: rgb(138, 138, 138);
+    --dark-gray: rgb(77, 77, 77);
 
-        --accent-primary: rgb(154, 53, 255);
-        --accent-secondary: rgb(55, 171, 255);
-        --accent-gradient: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
-    
-        --light-gray: rgb(138, 138, 138);
-        --dark-gray: rgb(77, 77, 77);
+    --light-main: rgb(230, 230, 230);
+    --dark-main: rgb(30, 30, 30);
+  }
 
-        --light-main: rgb(230, 230, 230);
-        --dark-main: rgb(30, 30, 30);
-    }
+  html {
+    font-family: "Red Hat Display";
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
 
-    html {
-        font-family: "Red Hat Display";
-        width: 100%;
-		height: 100%;
-		margin: 0;
-		padding: 0;
-        scroll-behavior: smooth;
-    }
+  body {
+    background-color: var(--light-main);
+    height: 100%;
+  }
 
-    body {
-        background-color: var(--light-main);
-        height: 100%;
-    }
-    
-    h2 {
-        @apply text-2xl md:text-4xl;
-    }
+  h2 {
+    @apply text-2xl md:text-4xl;
+  }
 
-    h3 {
-        @apply text-xl md:text-2xl font-bold;
-        @apply leading-none;
-    }
+  h3 {
+    @apply text-xl font-bold md:text-2xl;
+    @apply leading-none;
+  }
 
-    p {
-        @apply text-base md:text-lg;
-        @apply leading-tight;
-    }
+  p {
+    @apply text-base md:text-lg;
+    @apply leading-tight;
+  }
 
-    li {
-        @apply leading-none;
-    }
-
+  li {
+    @apply leading-none;
+  }
 }
 
 @layer components {
+  .global-padding {
+    @apply px-5 md:px-14;
+  }
 
-    .global-padding {
-        @apply px-5 md:px-14;
-    }
-    
-    .section {
-        @apply text-dark-main min-h-full h-fit flex items-center;
-    }
+  .section {
+    @apply flex h-fit min-h-full items-center text-dark-main;
+  }
 
-    .gradient-underline:before {
-        mask-image: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 100%) 0% 40%,
-            transparent 85%
-        );
-        z-index: -1;
-        position: absolute;
-        height: 7px;
-        width: 100%;
-        bottom: -3px;
-        left: -1%;
-        content: "";
-        background: linear-gradient(
-            90deg,
-            var(--accent-primary) 0%,
-            var(--accent-secondary) 50% 100%
-        );
-    }
+  .gradient-underline:before {
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 100%) 0% 40%,
+      transparent 85%
+    );
+    z-index: -1;
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    bottom: -3px;
+    left: -1%;
+    content: "";
+    background: linear-gradient(
+      90deg,
+      var(--accent-primary) 0%,
+      var(--accent-secondary) 50% 100%
+    );
+  }
 
-    .project-border-effect:before {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        left: 0px;
-        top: 0px;
-        content: "";
-        background: var(--accent-gradient);
-    }
+  .project-border-effect:before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    content: "";
+    background: var(--accent-gradient);
+  }
 
-    .project-fill-gradient {
-        background: linear-gradient(
-            to top,
-            var(--dark-main) 40%,
-            transparent 100%
-        );
-    }
+  .project-fill-gradient {
+    background: linear-gradient(to top, var(--dark-main) 40%, transparent 100%);
+  }
 
-    .project-fill-gradient-effect:before {
-        mask-image: linear-gradient(
-            165deg,
-            transparent 0% 35%,
-            rgba(0, 0, 0, 50%) 60%,
-            rgba(0, 0, 0, 100%) 80% 100%
-        );
-        mask-repeat: no-repeat;
-        mask-position: 0% 0%;
-        mask-size: 300% 300%;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        left: 0px;
-        top: 0px;
-        content: "";
-        background:
-        radial-gradient(
-            circle farthest-corner at 50% 95%,
-            rgba(255, 255, 255, 0.6) 0%,
-            transparent 25% 100%
-        ),
-        radial-gradient(
-            circle farthest-corner at 60% 72%,
-            var(--accent-secondary) 0% 3%,
-            transparent 45% 100%
-        ),
-        radial-gradient(
-            circle farthest-corner at 83% 65%,
-            rgb(255, 170, 0) 0% 5%,
-            transparent 30% 100%
-        ),
-        var(--accent-primary);
-        background-repeat: no-repeat;
-        background-position: 50% 30%;
-        background-size: 350% 350%;
-        transition: mask-position 300ms ease, background-position 350ms ease,
-        background-size 350ms ease;
-    }
+  .project-fill-gradient-effect:before {
+    mask-image: linear-gradient(
+      165deg,
+      transparent 0% 35%,
+      rgba(0, 0, 0, 50%) 60%,
+      rgba(0, 0, 0, 100%) 80% 100%
+    );
+    mask-repeat: no-repeat;
+    mask-position: 0% 0%;
+    mask-size: 300% 300%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    content: "";
+    background: radial-gradient(
+        circle farthest-corner at 50% 95%,
+        rgba(255, 255, 255, 0.6) 0%,
+        transparent 25% 100%
+      ),
+      radial-gradient(
+        circle farthest-corner at 60% 72%,
+        var(--accent-secondary) 0% 3%,
+        transparent 45% 100%
+      ),
+      radial-gradient(
+        circle farthest-corner at 83% 65%,
+        rgb(255, 170, 0) 0% 5%,
+        transparent 30% 100%
+      ),
+      var(--accent-primary);
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+    background-size: 350% 350%;
+    transition:
+      mask-position 300ms ease,
+      background-position 350ms ease,
+      background-size 350ms ease;
+  }
 
-    .project-border-effect:hover .project-fill-gradient-effect:before {
-        mask-position: 100% 100%;
-        background-position: 100% 100%;
-        background-size: 300% 300%;
-    }
+  .project-border-effect:hover .project-fill-gradient-effect:before {
+    mask-position: 100% 100%;
+    background-position: 100% 100%;
+    background-size: 300% 300%;
+  }
 
-    .project-icon-mask {
-        mask-image: linear-gradient(
-            5deg,
-            transparent 0% 15%,
-            rgba(0, 0, 0, 100%) 73% 100%
-        );
-    }
+  .project-icon-mask {
+    mask-image: linear-gradient(
+      5deg,
+      transparent 0% 15%,
+      rgba(0, 0, 0, 100%) 73% 100%
+    );
+  }
 
-    .resume-scale {
-        @apply hover:scale-[1.05] duration-[150ms] ease-in
-    }
+  .resume-scale {
+    @apply duration-[150ms] ease-in hover:scale-[1.05];
+  }
 
-    .outline-effect {
-        outline: solid var(--light-main) 4px;
-        outline-offset: -1px;
-        transition: outline-width 100ms ease;
-    }
+  .outline-effect {
+    outline: solid var(--light-main) 4px;
+    outline-offset: -1px;
+    transition: outline-width 100ms ease;
+  }
 
-    .resume-scale:hover > .outline-effect {
-        @apply outline-0;
-    }
+  .resume-scale:hover > .outline-effect {
+    @apply outline-0;
+  }
 
-    .navbar-object-hover {
-    @apply relative bg-accent-gradient bg-clip-text w-fit h-fit flex justify-center items-end sm:items-center sm:justify-center;
+  .navbar-object-hover {
+    @apply relative flex h-fit w-fit items-end justify-center bg-accent-gradient bg-clip-text sm:items-center sm:justify-center;
     /* @apply transition-[color] duration-150 hover:text-transparent; */
-    
-    }
+  }
 
-    .stroke-animation {
-        @apply absolute w-8 sm:w-11 md:w-14 -bottom-1 sm:-bottom-2 md:-bottom-[0.6rem];
-        animation: show 1s forwards;
-    }
+  .stroke-animation {
+    @apply absolute -bottom-1 w-8 sm:-bottom-2 sm:w-11 md:-bottom-[0.6rem] md:w-14;
+    animation: show 1s forwards;
+  }
 
-    /* to prevent draw-out happening at refresh */
-    @keyframes show {
-        0% { opacity: 0; }
-        99% { opacity: 0; }
-        100% { opacity: 1; }
+  /* to prevent draw-out happening at refresh */
+  @keyframes show {
+    0% {
+      opacity: 0;
     }
+    99% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
-    .path-animation {
-        stroke-dasharray: 300;
-        animation: draw-out 250ms ease-in forwards;
-    }
-    
-    .navbar-object-hover:hover .path-animation {
-        animation: draw-in 300ms ease-out forwards;
-    }
+  .path-animation {
+    stroke-dasharray: 300;
+    animation: draw-out 250ms ease-in forwards;
+  }
 
-    @keyframes draw-in {
-        from { stroke-dashoffset: 300; } 
-        to { stroke-dashoffset: 0; }
-    }
+  .navbar-object-hover:hover .path-animation {
+    animation: draw-in 300ms ease-out forwards;
+  }
 
-    @keyframes draw-out {
-        from { stroke-dashoffset: 0; }
-        to { stroke-dashoffset: 300; }
+  @keyframes draw-in {
+    from {
+      stroke-dashoffset: 300;
     }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
 
+  @keyframes draw-out {
+    from {
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: 300;
+    }
+  }
 }
