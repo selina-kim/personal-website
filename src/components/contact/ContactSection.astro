@@ -9,14 +9,15 @@ import Social from "./Social.astro";
 
 import GitHubIcon from "@icons/GitHubIcon.astro";
 import LinkedInIcon from "@icons/LinkedInIcon.astro";
+import CopyIcon from "@icons/CopyIcon.astro";
 ---
 
-<div id={sectionId} class="section flex-col justify-center text-center">
-  <div class="my-[var(--footer-height)] flex-col space-y-6 py-4 md:my-20">
-    <p class="select-all text-base font-bold leading-none md:text-2xl">
-      selinakim343@outlook.com
-    </p>
+<script src="@util/clipboard.js"></script>
 
+<div id={sectionId} class="section flex flex-col justify-center text-center">
+  <div
+    class="my-[var(--footer-height)] flex flex-col items-center gap-y-6 py-4 md:my-20"
+  >
     <!-- Resume button -->
     <div
       class="hoverable resume-scale project-border-effect relative cursor-pointer overflow-hidden rounded-full p-[2px] sm:p-1"
@@ -30,6 +31,31 @@ import LinkedInIcon from "@icons/LinkedInIcon.astro";
       >
         Resume
       </a>
+    </div>
+
+    <!-- Copy Email -->
+    <div
+      class="flex w-fit flex-row items-center justify-center rounded-md border border-light-gray bg-light-main p-1 md:p-2"
+    >
+      <p
+        id="myInput"
+        class="mx-2 text-base font-bold leading-none md:mx-4 md:text-xl"
+      >
+        selinakim343@outlook.com
+      </p>
+      <div class="tooltip">
+        <button
+          class="hoverable relative flex h-7 w-7 flex-col items-center justify-center rounded-md bg-accent-primary text-light-main md:h-9 md:w-9"
+        >
+          <span
+            class="tooltiptext absolute left-1/2 top-[150%] z-10 -translate-x-1/2 whitespace-nowrap rounded-md bg-accent-primary px-2 py-0.5 text-sm opacity-0 outline outline-2 -outline-offset-1 outline-accent-primary md:px-3 md:py-1 md:text-base"
+            id="myTooltip">copy</span
+          >
+          <div class="w-4 md:w-6">
+            <CopyIcon />
+          </div>
+        </button>
+      </div>
     </div>
 
     <!-- Social Icons -->
