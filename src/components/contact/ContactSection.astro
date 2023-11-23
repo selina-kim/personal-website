@@ -12,21 +12,21 @@ import LinkedInIcon from "@icons/LinkedInIcon.astro";
 ---
 
 <div id={sectionId} class="section flex-col justify-center text-center">
-  <div class="flex-col my-[var(--footer-height)] md:my-20 py-4 space-y-6">
-    <p class="select-all text-base md:text-2xl font-bold leading-none">
+  <div class="my-[var(--footer-height)] flex-col space-y-6 py-4 md:my-20">
+    <p class="select-all text-base font-bold leading-none md:text-2xl">
       selinakim343@outlook.com
     </p>
 
     <!-- Resume button -->
     <div
-      class="relative overflow-hidden p-[2px] sm:p-1 rounded-full resume-scale project-border-effect cursor-pointer"
+      class="resume-scale project-border-effect relative cursor-pointer overflow-hidden rounded-full p-[2px] sm:p-1"
     >
       <a
         href="/Resume.pdf"
         rel="noopener noreferrer"
         target="_blank"
         title="View Resume"
-        class="relative block w-56 md:w-96 text-lg md:text-4xl leading-none font-bold overflow-hidden rounded-full px-5 py-2 md:px-6 md:py-3 bg-light-main sm:outline-effect"
+        class="sm:outline-effect relative block w-56 overflow-hidden rounded-full bg-light-main px-5 py-2 text-lg font-bold leading-none md:w-96 md:px-6 md:py-3 md:text-4xl"
       >
         Resume
       </a>

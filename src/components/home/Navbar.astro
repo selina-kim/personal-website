@@ -3,38 +3,38 @@ import NavBarHoverStroke from "./NavBarHoverStroke.astro";
 ---
 
 <nav
-  class="fixed top-0 flex justify-center items-end w-full h-[var(--navbar-height)] bg-light-main pt-3 pb-1 border-b-[1px] border-light-gray"
+  class="fixed top-0 flex h-[var(--navbar-height)] w-full items-end justify-center border-b-[1px] border-light-gray bg-light-main pb-1 pt-3"
 >
   <div
-    class="top-0 flex flex-row justify-between items-end w-full md:max-w-7xl global-padding"
+    class="global-padding top-0 flex w-full flex-row items-end justify-between md:max-w-7xl"
   >
     <span
-      class="whitespace-nowrap text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-accent-gradient select-none"
+      class="select-none whitespace-nowrap bg-accent-gradient bg-clip-text text-4xl font-bold text-transparent md:text-5xl"
     >
       selina kim
     </span>
 
     <span class="flex space-x-8">
       <ul
-        class="relative text-base select-none pb-1 sm:pb-3 items-end text-center sm:text-lg md:text-2xl font-bold text-dark-main flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:gap-x-4 ml-6 sm:ml-0"
+        class="relative ml-6 flex select-none flex-col items-end space-y-1 pb-1 text-center text-base font-bold text-dark-main sm:ml-0 sm:flex-row sm:gap-x-4 sm:space-y-0 sm:pb-3 sm:text-lg md:text-2xl"
       >
         <li class="navbar-object-hover">
           <div class="stroke-animation">
             <NavBarHoverStroke />
           </div>
-          <a href="#home-section" rel="noopener noreferrer"> home</a>
+          <a href="#home-section" rel="noopener noreferrer">home</a>
         </li>
         <li class="navbar-object-hover">
           <div class="stroke-animation">
             <NavBarHoverStroke />
           </div>
-          <a href="#project-section" rel="noopener noreferrer"> projects</a>
+          <a href="#project-section" rel="noopener noreferrer">projects</a>
         </li>
         <li class="navbar-object-hover">
           <div class="stroke-animation">
             <NavBarHoverStroke />
           </div>
-          <a href="#contact-section" rel="noopener noreferrer"> contact</a>
+          <a href="#contact-section" rel="noopener noreferrer">contact</a>
         </li>
       </ul>
     </span>
