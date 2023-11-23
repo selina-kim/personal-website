@@ -34,11 +34,6 @@
     scroll-behavior: smooth;
   }
 
-  body {
-    background-color: var(--light-main);
-    height: 100%;
-  }
-
   h2 {
     @apply text-2xl md:text-4xl;
   }
@@ -64,7 +59,7 @@
   }
 
   .section {
-    @apply flex h-fit min-h-full items-center text-dark-main;
+    @apply flex h-fit min-h-full items-center;
   }
 
   .cursor-basic {
@@ -127,6 +122,14 @@
   }
 
   .project-fill-gradient {
+    background: linear-gradient(
+      to top,
+      var(--light-main) 40%,
+      transparent 100%
+    );
+  }
+
+  .dark .project-fill-gradient {
     background: linear-gradient(to top, var(--dark-main) 40%, transparent 100%);
   }
 
@@ -186,11 +189,14 @@
   }
 
   .resume-scale {
-    @apply duration-[150ms] ease-in hover:scale-[1.05];
+    transition: 150ms ease-in;
+  }
+
+  .resume-scale:hover {
+    transform: scale(1.05);
   }
 
   .outline-effect {
-    outline: solid var(--light-main) 4px;
     outline-offset: -1px;
     transition: outline-width 100ms ease;
   }
@@ -267,8 +273,12 @@
     margin-left: -6px;
     border-width: 6px;
     border-style: solid;
-    z-index: 1;
     border-color: transparent transparent var(--accent-primary) transparent;
+    z-index: 1;
+  }
+
+  .dark .tooltip .tooltiptext::after {
+    border-color: transparent transparent var(--accent-secondary) transparent;
   }
 
   .tooltip:hover .tooltiptext {

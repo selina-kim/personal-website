@@ -23,7 +23,7 @@ export interface Props {
   rel="noopener noreferrer"
   target="_blank"
   title=`Click for ${title}`
-  class="hoverable project-border-effect relative h-[350px] w-full max-w-[550px] cursor-pointer select-none overflow-hidden rounded-[13px] bg-light-gray p-[1.5px] md:w-[290px]"
+  class="hoverable project-border-effect relative h-[350px] w-full max-w-[550px] cursor-pointer select-none overflow-hidden rounded-[13px] bg-light-gray p-[2px] md:w-[290px]"
 >
   <div class="relative h-full w-full overflow-hidden rounded-xl">
     <Image
@@ -38,7 +38,9 @@ export interface Props {
       class="project-fill-gradient project-fill-gradient-effect absolute h-full w-full cursor-pointer"
     >
       <!-- project content (name, description, icon) -->
-      <div class="absolute left-0 h-full w-full p-3 text-light-main">
+      <div
+        class="absolute left-0 h-full w-full p-3 text-dark-main dark:text-light-main"
+      >
         <div class="flex h-[11.5rem] w-full items-end">
           <div class="project-icon-mask mx-auto translate-y-2 drop-shadow-md">
             <div class="w-14 rotate-[19deg]">

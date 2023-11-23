@@ -23,30 +23,14 @@ export interface Props {
       content="Selina Kim Personal Website. Programmer. Computer Science Student."
     />
     <title>{title}</title>
+    <script src="@util/themeToggle.js"></script>
   </head>
-  <body>
+  <body
+    class="h-full bg-light-main text-dark-main dark:bg-dark-main dark:text-light-main"
+  >
     <script src="@util/cursor.js"></script>
     <div id="cursor-small" class="cursor-basic lg:cursor-small"></div>
     <div id="cursor-big" class="cursor-basic lg:cursor-big"></div>
     <slot />
   </body>
 </html>
-
-<script is:inline>
-  const theme = (() => {
-    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-      return localStorage.getItem("theme");
-    }
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-    return "light";
-  })();
-
-  if (theme === "light") {
-    document.documentElement.classList.remove("dark");
-  } else {
-    document.documentElement.classList.add("dark");
-  }
-  window.localStorage.setItem("theme", theme);
-</script>

@@ -3,7 +3,7 @@ import NavBarHoverStroke from "./NavBarHoverStroke.astro";
 ---
 
 <nav
-  class="fixed top-0 flex h-[var(--navbar-height)] w-full items-end justify-center border-b-[1px] border-light-gray bg-light-main pb-1 pt-3"
+  class="flex h-[var(--navbar-height)] items-end justify-center border-b-[1px] border-light-gray bg-light-main pb-1 pt-3 dark:border-dark-gray dark:bg-dark-main"
 >
   <div
     class="global-padding top-0 flex w-full flex-row items-end justify-between md:max-w-7xl"
@@ -16,7 +16,7 @@ import NavBarHoverStroke from "./NavBarHoverStroke.astro";
 
     <span class="flex space-x-8">
       <ul
-        class="relative ml-6 flex select-none flex-col items-end space-y-1 pb-1 text-center text-base font-bold text-dark-main sm:ml-0 sm:flex-row sm:gap-x-4 sm:space-y-0 sm:pb-3 sm:text-lg md:text-2xl"
+        class="relative ml-6 flex select-none flex-col items-end space-y-1 pb-1 text-center text-base font-bold text-dark-main dark:text-light-main sm:ml-0 sm:flex-row sm:gap-x-4 sm:space-y-0 sm:pb-3 sm:text-lg md:text-2xl"
       >
         <li class="hoverable navbar-object-hover">
           <div class="stroke-animation">
