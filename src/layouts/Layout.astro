@@ -25,6 +25,9 @@ export interface Props {
     <title>{title}</title>
   </head>
   <body>
+    <script src="@util/cursor.js"></script>
+    <div id="cursor-small" class="cursor-basic lg:cursor-small"></div>
+    <div id="cursor-big" class="cursor-basic lg:cursor-big"></div>
     <slot />
   </body>
 </html>
