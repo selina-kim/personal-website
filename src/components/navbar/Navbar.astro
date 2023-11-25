@@ -1,5 +1,6 @@
 ---
-import NavBarHoverStroke from "./NavBarHoverStroke.astro";
+import NavBarHoverStroke from "@components/navbar/NavBarHoverStroke.astro";
+import ThemeToggle from "@components/navbar/ThemeToggle.astro";
 ---
 
 <nav
@@ -14,9 +15,10 @@ import NavBarHoverStroke from "./NavBarHoverStroke.astro";
       selina kim
     </span>
 
-    <span class="flex space-x-8">
+    <span class="relative flex gap-x-8">
+      <ThemeToggle />
       <ul
-        class="relative flex select-none flex-col items-end gap-y-1 pb-1 text-center text-base font-bold text-dark-main dark:text-light-main sm:flex-row sm:gap-x-4 sm:space-y-0 sm:pb-3 sm:text-lg md:text-2xl"
+        class="relative flex select-none flex-col items-end gap-y-1 pb-1 text-center text-base font-bold text-dark-main dark:text-light-main sm:flex-row sm:gap-x-4 sm:pb-3 sm:text-lg md:text-2xl"
       >
         <li class="hoverable navbar-object-hover">
           <div class="stroke-animation">
