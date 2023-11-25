@@ -59,7 +59,7 @@
   }
 
   .section {
-    @apply flex h-fit min-h-full items-center;
+    @apply flex min-h-screen items-center;
   }
 
   .cursor-basic {

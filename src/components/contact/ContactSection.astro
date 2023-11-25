@@ -14,10 +14,11 @@ import CopyIcon from "@icons/CopyIcon.astro";
 
 <script src="@util/clipboard.js"></script>
 
-<div id={sectionId} class="section flex flex-col justify-center text-center">
-  <div
-    class="my-[var(--footer-height)] flex flex-col items-center gap-y-6 py-4 md:my-20"
-  >
+<div
+  id={sectionId}
+  class="section flex flex-col justify-center pb-[var(--footer-height)] pt-[var(--navbar-height)] text-center"
+>
+  <div class="flex flex-col items-center gap-y-6 py-6">
     <!-- Resume button -->
     <div
       class="hoverable resume-scale project-border-effect relative cursor-pointer overflow-hidden rounded-full p-[2px] sm:p-1"

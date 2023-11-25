@@ -13,7 +13,9 @@ import "../styles/global.css";
 
 <Layout title="selina kim">
   <!-- Webpage Content -->
-  <div class="global-padding mx-auto block h-full w-full md:max-w-7xl">
+  <div
+    class="global-padding mx-auto -mb-[var(--footer-height)] block w-full min-w-fit md:max-w-7xl"
+  >
     <Particles
       client:only="react"
       className="animate-fade-in absolute inset-0 -z-10"
@@ -23,9 +25,9 @@ import "../styles/global.css";
     <HomeSection sectionId="home-section" />
     <ProjectSection sectionId="project-section" />
     <ContactSection sectionId="contact-section" />
-
-    <Footer />
   </div>
+
+  <Footer />
 
   <div class="fixed top-0 w-full">
     <Navbar />
