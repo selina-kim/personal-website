@@ -11,6 +11,7 @@ import PersonalWebsiteThumbnail from "@images/project-thumbnails/personal-websit
 import PythonTetrisThumbnail from "@images/project-thumbnails/python-tetris.png";
 import EduEverywhereThumbnail from "@images/project-thumbnails/edu-everywhere.png";
 import StockpileThumbnail from "@images/project-thumbnails/stockpile.png";
+import MernBlogAppThumbnail from "@images/project-thumbnails/mern-blog-app.png";
 
 import DevpostIcon from "@icons/DevpostIcon.astro";
 import GitHubIcon from "@icons/GitHubIcon.astro";
@@ -24,6 +25,17 @@ import GitHubIcon from "@icons/GitHubIcon.astro";
     <h2>my projects</h2>
   </div>
   <div class="flex w-full flex-wrap justify-center gap-4 md:gap-8">
+    <Project
+      name="MERN Stack Markdown Blog App"
+      desc="MERN Stack Markdown Blog App built with MongoDB, Express.js, React, Node.js and Typescript."
+      link="https://github.com/selina-kim/mern-blog-app"
+      LinkIcon={GitHubIcon}
+      img={MernBlogAppThumbnail}
+      imgAlt="MERN Stack Markdown Blog App Thumbnail"
+      imgWidth={720}
+      imgHeight={450}
+      title="Source Code"
+    />
     <Project
       name="Personal Website"
       desc="Personal website built with Astro, Tailwind CSS, TypeScript and deployed with Netlify."
