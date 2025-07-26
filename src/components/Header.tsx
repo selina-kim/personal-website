@@ -17,25 +17,25 @@ export const Header = () => {
 
   return (
     <>
-      <div className="flex justify-between py-10">
+      <div className="mb-10 flex justify-between">
         <div className="flex flex-col justify-center gap-y-3">
           <Link href="/" className="w-full text-2xl font-extrabold">
             selina kim :D
           </Link>
           <Links />
         </div>
-        <div className="h-25 w-25 shrink-0">
+        <div className="bg-accent/25 h-25 w-25 shrink-0 rounded-lg p-2 pr-2">
           <Image
-            src="/kirby.gif"
             unoptimized
+            src="/kirby.gif"
             alt="Kirby Gif"
             width={0}
             height={0}
-            className="h-full w-full"
+            className="-ml-0.5 h-full w-full"
           />
         </div>
       </div>
-      <nav className="mb-10 flex justify-center gap-x-6 border-t-2 border-b-2 py-1.5">
+      <nav className="mb-10 flex justify-center gap-x-6 border-y py-1.5 text-sm">
         {sections.map((section) => {
           const isSelected = selectedSection === section.path;
           return (
