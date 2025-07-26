@@ -1,20 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #bdbcf8;
-  --foreground: #52389a;
+  --main-dark: 82, 56, 154;
+  --main-light: 235, 221, 191;
+  --accent: 216, 46, 66;
+  --background: rgb(var(--main-light));
+  --foreground: rgb(var(--main-dark));
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: rgb(var(--accent));
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
 }
@@ -22,4 +19,28 @@
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+.card {
+  position: relative;
+  border: solid 1px;
+}
+
+/* .card-bg-fill {
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(var(--accent), 15%);
+  mask-image: linear-gradient(to right, rgb(0, 0, 0), transparent 40%);
+  mask-repeat: no-repeat;
+  mask-size: 200% 100%;
+  mask-position: 100% 100%;
+  transition: mask-position 300ms ease;
+} */
+
+.card:hover .card-bg-fill {
+  mask-position: 0% 100%;
 }

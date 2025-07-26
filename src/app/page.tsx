@@ -1,9 +1,5 @@
-import About from "@/components/About";
+import AboutPage from "./about/page";
 
-export const Home = () => (
-  <>
-    <About />
-  </>
-);
-
-export default Home;
+export default function Home() {
+  return <AboutPage />;
+}
