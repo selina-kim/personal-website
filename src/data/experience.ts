@@ -27,7 +27,7 @@ export const EXPERIENCE: {
     company: "DeltaHacks",
     url: "https://www.deltahacks.com",
     time: ["Jan. 2023", "present"],
-    position: "technical executive",
+    position: "hackathon technical executive",
     desc: "built landing page & improved internal tools (forms, admin portal, etc)",
     tech: ["typescript", "astrojs", "tailwindcss", "github"],
   },
