@@ -24,15 +24,17 @@ export const Header = () => {
           </Link>
           <Links />
         </div>
-        <div className="bg-accent/25 h-25 w-25 shrink-0 rounded-lg p-2 pr-2">
-          <Image
-            unoptimized
-            src="/kirby.gif"
-            alt="Kirby Gif"
-            width={0}
-            height={0}
-            className="-ml-0.5 h-full w-full"
-          />
+        <div className="bg-accent/25 h-25 w-25 shrink-0 rounded-lg p-2">
+          <div className="h-full w-full">
+            <Image
+              unoptimized
+              src="/kirby.gif"
+              alt="Kirby Gif"
+              width={0}
+              height={0}
+              className="-ml-0.5 h-full w-full"
+            />
+          </div>
         </div>
       </div>
       <nav className="mb-10 flex justify-center gap-x-6 border-y py-1.5 text-sm">
