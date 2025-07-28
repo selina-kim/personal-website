@@ -27,11 +27,11 @@ export default function AboutPage() {
 
       <p>
         feel free to check out my previous{" "}
-        <a href="/experience" className="text-accent font-bold underline">
-          work experience
+        <a href="/experience" className="text-accent underline">
+          experience
         </a>{" "}
         as well as{" "}
-        <a href="/projects" className="text-accent font-bold underline">
+        <a href="/projects" className="text-accent underline">
           projects
         </a>{" "}
         i've been working on.
