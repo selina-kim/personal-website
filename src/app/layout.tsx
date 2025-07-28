@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetBrainsMono.variable} antialiased`}
       >
-        <div className="relative mx-auto min-h-screen max-w-2xl px-6 py-10 font-mono">
+        <div className="relative mx-auto max-w-2xl px-6 py-10 font-mono">
           <Header />
           {children}
         </div>
