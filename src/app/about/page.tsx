@@ -7,17 +7,39 @@ export default function AboutPage() {
 
       <p>
         i'm a software developer based in <b>canada</b> and currently a{" "}
-        <b className="text-accent">computer science</b> student in my final year
-        at{" "}
-        <a href="https://www.mcmaster.ca" className="font-bold underline">
+        <em>computer science</em> student in my final year at{" "}
+        <a
+          target="_blank"
+          href="https://www.mcmaster.ca"
+          className="font-bold underline"
+        >
           mcmaster university
         </a>
         .
       </p>
 
+      <p>
+        i mainly work on <b>frontend</b> and <b>backend</b> development
+        alongside other random coding side quests like scripting, web design,
+        and reverse engineering existing apps -- depending on what piques my
+        interest at the moment.
+      </p>
+
+      <p>
+        feel free to check out my previous{" "}
+        <a href="/experience" className="text-accent font-bold underline">
+          work experience
+        </a>{" "}
+        as well as{" "}
+        <a href="/projects" className="text-accent font-bold underline">
+          projects
+        </a>{" "}
+        i've been working on.
+      </p>
+
       <br />
 
-      <p className="italic">last updated: July 2025</p>
+      <i>last updated: Jul. 2025</i>
     </section>
   );
 }

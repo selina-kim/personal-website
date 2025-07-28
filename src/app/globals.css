@@ -21,6 +21,10 @@ body {
   color: var(--foreground);
 }
 
+em {
+  @apply text-accent font-bold not-italic;
+}
+
 .card {
   position: relative;
   border: solid 1px;
