@@ -13,13 +13,13 @@ export default function ProjectsPage() {
           <div className="font-bold">
             {project.name} {project.emoji}
           </div>
-          <div className="flex gap-x-2">
+          <div className="mt-0.5 flex gap-x-2">
             {project.urls?.map((url) => (
               <a
                 key={url.name}
                 href={url.link}
                 target="_blank"
-                className="text-accent underline-offset mt-0.5 underline"
+                className="text-accent underline-offset underline"
               >
                 {url.name}
                 <div className="ml-0.5 inline-block w-3">
