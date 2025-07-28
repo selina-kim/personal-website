@@ -22,7 +22,7 @@ body {
 }
 
 em {
-  @apply text-accent font-bold not-italic;
+  @apply text-accent not-italic;
 }
 
 .card {
