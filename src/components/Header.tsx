@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Links from "./Links";
+import Contacts from "./Contacts";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
@@ -22,7 +22,7 @@ export const Header = () => {
           <Link href="/" className="w-full text-2xl font-extrabold">
             selina kim :D
           </Link>
-          <Links />
+          <Contacts />
         </div>
         <div className="bg-accent/25 h-25 w-25 shrink-0 rounded-lg p-2">
           <div className="h-full w-full">
